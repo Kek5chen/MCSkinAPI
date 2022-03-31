@@ -19,15 +19,17 @@ function getUserUUID(username) {
 
 function getUserSkinData(uuid) {
 	return new Promise((resolve, reject) => {
-		https.get(`https://sessionserver.mojang.com/session/minecraft/profile/${uuid}`, (res) => {
+		https.get(`https://sessionserver.mojang.com/session/minecraft/profile/${uuid}?unsigned=false`, (res) => {
 			let body = '';
 			res.on('data', (chunk) => {
 				body += chunk;
 			});
 			res.on('end', () => {
 				const data = JSON.parse(body);
+				data.properties[0].raw = data.properties[0].value;
+				data.properties[0].value = JSON.parse(atob(data.properties[0].value));
 				try {
-					resolve(atob(data.properties[0].value));
+					resolve(data);
 				} catch (err) {
 					reject(err);
 				}

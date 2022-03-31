@@ -5,5 +5,5 @@ const skinapi = require('../skinapi');
 	const skinData = await skinapi.getUserSkinData(uuid)
 
 	console.log('kx_kx UUID:', uuid);
-	console.log('kx_kx skin data:', skinData);
+	console.log('kx_kx skin data:\n', JSON.stringify(skinData, null, 2));
 })();
