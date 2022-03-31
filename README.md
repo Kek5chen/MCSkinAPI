@@ -18,7 +18,7 @@ const skinapi = require('skinapi');
 
 This will receive the UUID and skin data for the user `kx_kx` resulting in:
 
-```json
+```
 kx_kx UUID: 6eab089f969847fb8fe5c95fb5d20b6c
 kx_kx skin data: {
   "timestamp" : 1648746100169,
