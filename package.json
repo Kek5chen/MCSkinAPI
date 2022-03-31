@@ -1,0 +1,18 @@
+{
+  "name": "skinapi",
+  "version": "1.0.0",
+  "description": "Receive skin data by username from Mojangs servers",
+  "keywords": [
+    "skin",
+    "minecraft",
+    "mojang",
+    "api"
+  ],
+  "author": "kx",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kek5chen/minecraftskindata.git"
+  },
+  "main": "skinapi"
+}
